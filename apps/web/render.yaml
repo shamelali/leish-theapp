@@ -1,0 +1,12 @@
+@'
+services:
+  - type: web
+    name: leish-web
+    env: node
+    buildCommand: pnpm install && pnpm build
+    startCommand: pnpm start
+    plan: free
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+'@ | Set-Content -Encoding utf8 render.yaml
